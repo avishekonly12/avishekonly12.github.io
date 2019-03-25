@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Tableau 8.0 JavaScript API On-Demand Tutorial Example</title>
+	<link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link href="bootstrap.css" rel="stylesheet" media="screen">
+	<script type="text/javascript" src="http://tabsrvdcs.usgovvirginia.cloudapp.usgovcloudapi.net/javascripts/api/tableau_v8.debug.js"></script>
+	<script type="text/javascript" src="filter.js"></script>
+</head>
+<body>
+	<div class='container'>
+		<div class='row'>
+				<div class='span3'><img src='logo.png' ></div>
+		<h2 class='span7 pagination-centered'></h2> 
+		</div>
+		<div class='row'><h3 class='offset3 span7 pagination-centered' id='sheetName'></h3></div>
+		<div class='row'>
+
+			<!-- All of our work will happen here -->
+			<ul id = 'menu' class='nav nav-list span2'>
+				<!-- This is the menu where we will add all of our buttons. -->
+				<li class='nav-header'>MENU</li>
+				<li><a onClick="switchToMapTab()">Order Dashboard</a></li>
+				<li><a onClick="switchToMapTab1()">Sales Dashboard</a></li>
+				<li><a onClick="switchToMapTab2()">Facebook</a></li>
+				<li><a onClick="switchToMapTab3()">Animated Map</a></li>
+				
+				
+
+				<li class='nav-header'>Region</li>
+				<li><a onClick="showOnly('Region','CENTRAL')">Central</a></li>
+				<li><a onClick="showOnly1('Region','NORTH')">North</a></li>
+				<li><a onClick="showOnly2('Region','SOUTH')">South</a></li>
+				<li><a onClick="clearFilter('Region')">Clear Region Filter</a></li>
+				
+				
+			</ul>
+			<div id='viz'></div>
+			
+
+			<!-- This is the end of the section where we will do our work. -->
+
+		</div>
+	</div>
+</body>
+</html>
